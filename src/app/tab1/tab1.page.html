@@ -1,0 +1,213 @@
+<ion-header>
+  <ion-toolbar color="warning">
+      <ion-title>Register</ion-title>
+      <ion-buttons slot="start">
+          <ion-menu-button menu="main-menu">
+
+          </ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-item>
+  <ion-label position="floating"><ion-icon name="person-outline" color="warning"></ion-icon>&nbsp;&nbsp;Full Name</ion-label>
+  <ion-input  [(ngModel)]="name"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating"><ion-icon name="stats-chart-outline" color="warning"></ion-icon>&nbsp;&nbsp;PRN</ion-label>
+  <ion-input  type="number"  [(ngModel)]="uid"></ion-input>
+</ion-item>
+
+
+
+<ion-item>
+  <ion-label position="floating"><ion-icon name="mail-outline" color="warning"></ion-icon>&nbsp;&nbsp;Email</ion-label>
+  <ion-input type="email"  [(ngModel)]="email"></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating"><ion-icon name="call-outline" color="warning"></ion-icon>&nbsp;&nbsp;Contact</ion-label>
+  <ion-input  type="tel"  [(ngModel)]="phone"></ion-input>
+</ion-item>
+
+
+
+
+
+<ion-item lines="none" class="dropdown">
+  <ion-label>Class</ion-label>
+  <ion-select value="Select" oktext="Okay" cancelText="Dismiss">
+    <ion-select-option value="fymca">FYMCA</ion-select-option>
+    <ion-select-option value="symca">SYMCA</ion-select-option>
+    <ion-select-option value="tymca">TYMCA</ion-select-option>
+  </ion-select>
+
+
+
+  </ion-item>
+
+
+
+  <ion-item lines="none" class="dropDown">
+    <ion-label><ion-icon name="school-outline" color="warning"></ion-icon>&nbsp;&nbsp;Gender</ion-label>
+    <ion-select>
+    <ion-select-option value="male">Male</ion-select-option>
+    <ion-select-option value="female">Female</ion-select-option>
+    <ion-select-option value="other">Other</ion-select-option>
+    </ion-select>
+    </ion-item>
+
+
+    <ion-progress-bar type="indeterminate" reversed="true" color="danger"></ion-progress-bar>
+    <ion-progress-bar type="indeterminate" reversed="true" color="warning"></ion-progress-bar>
+    <ion-progress-bar type="indeterminate" reversed="true" color="danger"></ion-progress-bar>
+    <div>
+    <ion-list>
+      <ion-label><h1>&nbsp;&nbsp; <ion-icon name="school-outline" color="warning"></ion-icon>&nbsp;&nbsp;<b>Interests</b></h1></ion-label>
+    <ion-item>
+    <ion-checkbox color="dark" checked slot="start"></ion-checkbox>
+    <ion-label>Dynamic Programming</ion-label>
+    </ion-item>
+    <ion-item>
+    <ion-checkbox color="dark" slot="start"></ion-checkbox>
+    <ion-label>Frontend</ion-label>
+
+    </ion-item>
+
+      <ion-item>
+      <ion-checkbox color="dark" slot="start"></ion-checkbox>
+      <ion-label>Backend</ion-label>
+      </ion-item>
+      <ion-item>
+      <ion-checkbox color="dark" slot="start"></ion-checkbox>
+      <ion-label>Database</ion-label>
+
+
+      </ion-item>
+      </ion-list>
+      </div>
+
+
+      <ion-progress-bar type="indeterminate"   buffer="0.1" color="danger"></ion-progress-bar>
+      <ion-progress-bar type="indeterminate"  value="0.95" buffer="0.1" color="warning"></ion-progress-bar>
+      <ion-progress-bar type="indeterminate"   buffer="0.1" color="danger"></ion-progress-bar>
+
+<ion-item>
+  <ion-label><h1><ion-icon name="school-outline" color="warning"></ion-icon>&nbsp;&nbsp;<b>Graduation</b></h1></ion-label>
+  </ion-item>
+    <ion-item>
+      <ion-label position="floating"> Year of Passing</ion-label>
+      <ion-datetime displayFormat="YYYY" [(ngModel)]="clgPassing"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">College Name : </ion-label>
+      <ion-input [(ngModel)]="clgCollege"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Total Marks</ion-label>
+      <ion-input type="number" [(ngModel)]="clgMarks"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Marks out-off</ion-label>
+      <ion-input type="number"  [(ngModel)]="clgTotal" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input readonly>Percentage : {{(clgMarks/clgTotal)*100}}%</ion-input>
+    </ion-item>
+
+
+    <ion-progress-bar type="indeterminate" reversed="true" color="danger"></ion-progress-bar>
+    <ion-progress-bar type="indeterminate" reversed="true" color="warning"></ion-progress-bar>
+    <ion-progress-bar type="indeterminate" reversed="true" color="danger"></ion-progress-bar>
+
+<ion-item>
+<ion-label><h1><ion-icon name="school-outline" color="warning"></ion-icon>&nbsp;&nbsp;<b>12th Details </b></h1></ion-label>
+</ion-item>
+  <ion-item>
+    <ion-label position="floating">Year of Passing</ion-label>
+    <ion-datetime displayFormat="YYYY"  [(ngModel)]="hscPassing"></ion-datetime>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">School Name :</ion-label>
+    <ion-input [(ngModel)]="hscCollege"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Total Marks</ion-label>
+    <ion-input type="number" [(ngModel)]="hscMarks"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Marks out-off</ion-label>
+    <ion-input type="number" [(ngModel)]="hscTotal"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input readonly>Percentage : {{(hscMarks/hscTotal)*100}}%</ion-input>
+  </ion-item>
+  <ion-progress-bar type="indeterminate"  buffer="0.1" color="danger"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate"  value="0.95" buffer="0.1" color="warning"></ion-progress-bar>
+  <ion-progress-bar type="indeterminate"   buffer="0.1" color="danger"></ion-progress-bar>
+  <ion-item>
+    <ion-label><h1><ion-icon name="school-outline" color="warning"></ion-icon>&nbsp;&nbsp;<b>10th Details </b></h1></ion-label>
+    </ion-item>
+      <ion-item>
+        <ion-label position="floating">Year of Passing</ion-label>
+        <ion-datetime displayFormat="YYYY" [(ngModel)]="sscPassing"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">School Name :</ion-label>
+        <ion-input [(ngModel)]="sscCollege"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Total Marks</ion-label>
+        <ion-input type="number" [(ngModel)]="sscMarks"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Marks out-off</ion-label>
+        <ion-input type="number"  [(ngModel)]="sscTotal" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input readonly>Percentage : {{(sscMarks/sscTotal)*100}}%</ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Additional Courses :</ion-label>
+        <ion-input type="text" [(ngModel)]="additionalCourses"></ion-input>
+      </ion-item>
+
+<ion-item>
+  <ion-card class="ion-text-center" *ngIf="!isFileUploading && !isFileUploaded">
+    <ion-card-header>
+      <ion-card-title>Upload Resume</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button color="warning" size="medium">
+        <input type="file" (change)="uploadImage($event.target.files)" />
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- File upload progress bar -->
+  <div *ngIf="percentageVal | async as percentage">
+    Progress: {{ percentage | number }}%
+    <ion-progress-bar value="{{ percentage / 100 }}"></ion-progress-bar>
+  </div>
+
+  <div *ngIf="trackSnapshot | async as snap">
+    File size: {{ snap.totalBytes | formatFileSize }}
+
+    Data transfered: {{ snap.bytesTransferred | formatFileSize }}
+    <a [href]="downloadURL | async">{{ downloadURL | async }}</a>
+  </div>
+
+</ion-item>
+<ion-button color="dark" expand="block" fill="outline"(click)="submitForm()" >Submit</ion-button>
+
+
+
+</ion-content>
+
